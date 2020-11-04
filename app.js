@@ -1,7 +1,7 @@
 console.log('Starting')
 
     setTimeout(() => {
-        console.log('2 Second Timerr')
+        console.log('2 Second Timer')
 
     }, 2000)
 
