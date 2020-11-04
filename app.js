@@ -3,7 +3,7 @@ console.log('*Kenobi Jumps Downs*')
 console.log('General Kenobi: "Hello There"')
 
     setTimeout(() => {
-        console.log('2 Second Timer')
+        console.log('*EPIC JOHN WILLAEMS MUSIC*')
 
     }, 2000)
 
