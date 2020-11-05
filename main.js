@@ -22,8 +22,8 @@ request({url: url }, (error, response) =>{
    console.log('--------------------------------')
 
    request({url: mapBox, json: true}, (error,response) => {
-      var long = response.body.features[0].center[0]
-      var lat  = response.body.features[0].center[1]
+      var long = response.body.features[0].center[1]
+      var lat  = response.body.features[0].center[0]
       console.log(' > Longitude ' + long)
       console.log(' > Latitude ' + lat)
 
