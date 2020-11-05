@@ -7,6 +7,8 @@ console.log('------------------------------------------')
 request({url: url }, (error, response) =>{
 
    const data = JSON.parse(response.body)
+   console.log('Its ' + data.current.observation_time)
    console.log(' > Current Temperature is ' + data.current.temperature + ' C')
+   console.log('Chance of Rain is ' + data.current.precip + ' %')
 
 })
