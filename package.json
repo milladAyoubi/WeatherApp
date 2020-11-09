@@ -19,5 +19,8 @@
   "homepage": "https://github.com/nickolice396/WeatherApp#readme",
   "dependencies": {
     "request": "^2.88.0"
+  },
+  "devDependencies": {
+    "prettier": "2.1.2"
   }
 }

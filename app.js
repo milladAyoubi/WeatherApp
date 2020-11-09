@@ -6,14 +6,18 @@ console.log('General Kenobi: "Hello There"')
 
 
 //This function is executed last because of Node.js async development
-    setTimeout(() => {
-        console.log('*EPIC JOHN WILLAEMS MUSIC*')
+    setTimeout(() => {console.log('*EPIC JOHN WILLAEMS MUSIC*')
 
     }, 2000)
 
+    setTimeout(() => {
+      
+    }, timeout);
 
 
 
     console.log('*Grevious Turns Around*')
 
 console.log('Grevious: "General Kenobi"')
+var character = 3;
+

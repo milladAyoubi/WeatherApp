@@ -12,7 +12,17 @@ request({url: url }, (error, response) =>{
 
 
    console.log('Its ' + data.current.observation_time)
-   console.log(' > Current Temperature is ' + data.current.temperature + ' C')
+
+
+
+
+
+
+
+
+
+   
+            console.log(' > Current Temperature is ' + data.current.temperature + ' C')
    console.log(' > Chance of Rain is ' + data.current.precip + ' %')
    if(weatherType == 'Partly cloudy')
        console.log('It may be ' + weatherType + ' today but dont let that get you down!')
