@@ -24,9 +24,14 @@ request({ url: url }, (_error, response) => {
   console.log("--------------------------------");
 
   request({ url: mapBox, json: true }, (error, response) => {
+    if(error) {
+      console.log('Unable to Connect to Service');
+    }
+    else {
     var long = response.body.features[0].center[1];
     var lat = response.body.features[0].center[0];
-    console.log(" > Longitudee " + long);
+    console.log(" > Longitude " + long);
     console.log(" > Latitude " + lat);
+    }
   });
 });
