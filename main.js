@@ -8,7 +8,7 @@ const mapBox =
 console.log("Welcome To WeatherApp W/ WeatherStack API");
 console.log("------------------------------------------");
 
-request({ url: url }, (_error, response) => {
+request({ url: url }, (error, response) => {
 
   if(error) {console.log('Error')};
   if(response.body.error) {console.log('Error')};
@@ -32,7 +32,9 @@ request({ url: url }, (_error, response) => {
 
   request({ url: mapBox, json: true }, (error, response) => {
     if(error) {console.log('Unable to Connect to Service');}
-    
+    if(response.body.error) {console.log('No Matching Result');}
+
+
     var long = response.body.features[0].center[1];
     var lat = response.body.features[0].center[0];
     console.log(" > Longitude " + long);
