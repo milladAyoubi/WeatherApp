@@ -1,5 +1,5 @@
 const request = require("request");
-const geoCode = require('./utils/geoCode')
+const geoCode = require('./geoCode')
 
 //Refer to WeatherStack API Documentaion for Additional Functions:)
 const url =
@@ -28,16 +28,16 @@ request({ url: url }, (error, response) => {
     );
   });
 
-  request({ url: mapBox, json: true }, (error, response) => {
-    if(error) {console.log('Unable to Connect to Service');}
-    if(response.body.error) {console.log('No Matching Result');}
 
 
-    var long = response.body.features[0].center[1];
-    var lat = response.body.features[0].center[0];
-    console.log(" > Longitude " + long);
-    console.log(" > Latitude " + lat);
   
-  });
+  
 
+geoCode('Philidelphia',(error,data) => {
+  
+  console.log('Data',data)
+
+
+
+});
 
