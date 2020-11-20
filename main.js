@@ -1,6 +1,6 @@
 const request = require("request");
 const geoCode = require('./geoCode')
-
+const forcast = require('./forcast')
 //Refer to WeatherStack API Documentaion for Additional Functions:)
 const url =
   "http://api.weatherstack.com/current?access_key=fd4ab5def50a0a0c8d0cfcff7f835846&query=37.8267,-122.4233";
@@ -41,3 +41,7 @@ geoCode('Philidelphia',(error,data) => {
 
 });
 
+
+forcast(-75.7088, 44.1545, (error,data) => {
+  console.log('Data',data);
+});
