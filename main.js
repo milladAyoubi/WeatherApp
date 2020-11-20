@@ -43,6 +43,6 @@ geoCode('Philidelphia',(error,data) => {
 
 
 forecast(37.8267, -122.4233, (error,data) => {
-  console.log('Error',error);
-  console.log('Data',data);
+  console.log('Error:',error);
+  console.log('Data:',data);
 });

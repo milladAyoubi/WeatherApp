@@ -14,7 +14,7 @@ const forecast = (latitude, longitude,callback) => {
             callback('Error TO connect',undefined)
         }
         else 
-        callback(undefined, response.body)
+        callback(undefined, response.body.location.country + ' is the greatest')
   
 
     });
