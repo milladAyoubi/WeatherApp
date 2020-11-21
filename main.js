@@ -33,15 +33,26 @@ request({ url: url }, (error, response) => {
   
   
 */
-geoCode('Philidelphia',(error,data) => {
-  
-  console.log('Data',data)
+
+
+//Only Works With Location New York
+const address = process.argv[2]
+
+console.log(process.argv)
+
+geoCode(address,(error,data) => {
+  if(error)
+  console.log('Error:',error);
+  else
+  console.log('Data:',data);
 
 
 
-  forecast(data.latitude, data.longitude, (error,data) => {
+  forecast(data.latitude, data.longitude, (error,forecastData) => {
+    if(error)
     console.log('Error:',error);
-    console.log('Data:',data);
+    else
+    console.log('Data:',forecastData);
   });
   
 });
