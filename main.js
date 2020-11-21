@@ -39,10 +39,10 @@ geoCode('Philidelphia',(error,data) => {
 
 
 
+  forecast(data.latitude, data.longitude, (error,data) => {
+    console.log('Error:',error);
+    console.log('Data:',data);
+  });
+  
 });
 
-
-forecast(37.8267, -122.4233, (error,data) => {
-  console.log('Error:',error);
-  console.log('Data:',data);
-});
