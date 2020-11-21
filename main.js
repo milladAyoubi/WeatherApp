@@ -40,6 +40,9 @@ const address = process.argv[2]
 
 console.log(process.argv)
 
+if(!address) 
+  console.log('Error: Enter a location please')
+
 geoCode(address,(error,data) => {
   if(error)
   console.log('Error:',error);
