@@ -43,19 +43,19 @@ console.log(process.argv)
 if(!address) 
   console.log('Error: Enter a location please')
 
-geoCode(address,(error,data) => {
+geoCode(address,(error,{latitude,longitude,location}) => {
   if(error)
   console.log('Error:',error);
   else
-  console.log('Data:',data);
+  console.log('Geographic Data:',location);
 
 
 
-  forecast(data.latitude, data.longitude, (error,forecastData) => {
+  forecast(latitude, longitude, (error,forecastData) => {
     if(error)
     console.log('Error:',error);
     else
-    console.log('Data:',forecastData);
+    console.log('Forecast Data:',forecastData);
   });
   
 });
