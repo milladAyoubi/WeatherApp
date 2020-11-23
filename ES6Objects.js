@@ -23,16 +23,6 @@ const productBook = {
 }
 
 
-// Destructed
-/*
-const {label:productLabel,price:iPrice,stock: invStock,salePrice: sPrice, rating = 5} = product
-
-console.log(productLabel)
-console.log(invStock)
-console.log(iPrice)
-console.log(sPrice)
-console.log(rating)
-*/
 
 
 
